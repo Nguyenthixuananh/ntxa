@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a-->
+<form>
+    <input type="text" id="canh" placeholder="Nhập cạnh a">
+    <input type="button" onclick="tinh()" value="Tính">
+    <p id="kq">Kết quả là</p>
+</form>
+<script>
+    function tinh() {
+        let a = +document.getElementById("canh").value
+        let p = a * 4;
+        let s = a ** 2;
+        document.getElementById("kq").innerText="Hình vuông độ dài cạnh a có chu vi là " + p + " và có diện tích là " + s
+    }
+</script>
+</body>
+</html>

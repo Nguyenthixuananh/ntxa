@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập vào a và b, tính a^2, a^b-->
+<form>
+    <input type="text" id="a" placeholder="Nhập số a">
+    <input type="text" id="b" placeholder="Nhập số b">
+    <input type="button" onclick="tinh()"value="Tính">
+    <p id="kq">Kết quả là</p>
+</form>
+<script>
+    function tinh() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let x = a ** 2;
+        let y = a ** b
+        document.getElementById("kq").innerText = "a^2 = " + x + " và a^b = " + y
+    }
+</script>
+</body>
+</html>

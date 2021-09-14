@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập vào a là năm, in ra thế kỉ-->
+<!--nam % 100 == 0 thì theKy = nam/100;-->
+<!--theKy = nam/100 + 1;-->
+<form>
+    <input type="text" id="a" placeholder="Nhập năm">
+    <input type="button" onclick="xem()" value="Xem">
+    <p id="kq">Thuộc thế kỷ :</p>
+</form>
+<script>
+    function xem() {
+        let year = document.getElementById("a").value;
+        let theKy = year / 100;
+        let theKy1 = theKy + 1;
+        document.write(theKy1.toFixed(0))
+        if (year % 100 == 0) {
+            document.getElementById("kq").innerText = "năm " + year + " thuộc thế kỷ " + theKy;
+        } else {
+            document.getElementById("kq").innerText = "năm " + year + " thuộc thế kỷ " + theKy1;
+        }
+    }
+</script>
+</body>
+</html>

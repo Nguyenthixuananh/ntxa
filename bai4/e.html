@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Nhập vào a, b, c, kiểm tra xem a, b, c có phải là 3 cạnh của:
+i.1 tam giác?
+ii.1 tam giác cân?
+iii.1 tam giác đều?
+iv.1 tam giá vuông?-->
+<form>
+    <input type="text" id="a" placeholder="Nhập cạnh a">
+    <input type="text" id="b" placeholder="Nhập cạnh b">
+    <input type="text" id="c" placeholder="Nhập cạnh c">
+    <input type="button" onclick="xem()"value="Start">
+    <p id="kq"></p>
+</form>
+<script>
+    function xem() {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        if ((a + b) <= c || (b + c) <= a || (a + c) <= b) {
+            document.getElementById("kq").innerText = "a,b,c không phải là 3 cạnh của 1 tam giác"
+        } else {
+            document.getElementById("kq").innerText = "a,b,c là 3 cạnh của 1 tam giác"
+            if (a == b && b == c) {
+                document.getElementById("kq").innerText = "a,b,c là 3 cạnh của tam giác đều"
+            } else if (a == b || b == c || a == c) {
+                document.getElementById("kq").innerText = "a,b,c là 3 cạnh của tam giác cân"
+            }
+            if ((a ** 2 + b ** 2 == c ** 2) || (a ** 2 + c ** 2 == b ** 2) || (b ** 2 + c ** 2 == a ** 2)) {
+                document.getElementById("kq").innerText = "a,b,c là 3 cạnh của tam giác vuông"
+            }
+        }
+    }
+</script>
+</body>
+</html>
