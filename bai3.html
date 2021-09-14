@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Câu lệnh nhận vào giá trị từ 1 ô input: <input type="text" >-->
+
+<h1 id="hienthikq"></h1>
+<form>
+    <input type="text" placeholder="a" id="numbera">
+    <input type="text" placeholder="b" id="numberb">
+    <input type="button" onclick="tinh()" value="Tính">
+</form>
+<script>
+    function tinh() {
+        let a = +document.getElementById("numbera").value;
+        let b = +document.getElementById("numberb").value;
+        let s = a*b;
+        document.getElementById("hienthikq").innerText= s
+    }
+</script>
+</body>
+</html>
